@@ -140,8 +140,6 @@ class EmployeeServiceImplTest {
     void updateEmployee_Success() {
         // Arrange
         when(employeeRepository.findById(1L)).thenReturn(Optional.of(employee));
-        when(employeeRepository.existsByEmail(anyString())).thenReturn(false);
-        when(employeeRepository.existsByEmployeeId(anyString())).thenReturn(false);
         when(employeeRepository.save(any(Employee.class))).thenReturn(employee);
         when(modelMapper.map(employee, EmployeeDTO.class)).thenReturn(employeeDTO);
 

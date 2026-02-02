@@ -20,32 +20,32 @@ public class EmployeeDTO {
     private Long id;
 
     @NotBlank(message = "Employee ID is required")
-    @Schema(description = "Unique employee identifier", example = "EMP001", required = true)
+    @Schema(description = "Unique employee identifier", example = "EMP001", requiredMode = Schema.RequiredMode.REQUIRED)
     private String employeeId;
 
     @NotBlank(message = "First name is required")
-    @Schema(description = "Employee's first name", example = "John", required = true)
+    @Schema(description = "Employee's first name", example = "John", requiredMode = Schema.RequiredMode.REQUIRED)
     private String firstName;
 
     @NotBlank(message = "Last name is required")
-    @Schema(description = "Employee's last name", example = "Doe", required = true)
+    @Schema(description = "Employee's last name", example = "Doe", requiredMode = Schema.RequiredMode.REQUIRED)
     private String lastName;
 
     @NotBlank(message = "Email is required")
     @Email(message = "Email must be valid")
-    @Schema(description = "Employee's email address", example = "john.doe@example.com", required = true)
+    @Schema(description = "Employee's email address", example = "john.doe@example.com", requiredMode = Schema.RequiredMode.REQUIRED)
     private String email;
 
     @NotBlank(message = "Role is required")
-    @Schema(description = "Employee's role", example = "Software Engineer", required = true)
+    @Schema(description = "Employee's role", example = "Software Engineer", requiredMode = Schema.RequiredMode.REQUIRED)
     private String role;
 
     @NotNull(message = "Status is required")
-    @Schema(description = "Employee's current status", example = "ACTIVE", required = true, allowableValues = {"ACTIVE", "BENCH", "RESIGNED"})
+    @Schema(description = "Employee's current status", example = "ACTIVE", requiredMode = Schema.RequiredMode.REQUIRED, allowableValues = {"ACTIVE", "BENCH", "RESIGNED"})
     private String status;
 
     @NotBlank(message = "Primary skill is required")
-    @Schema(description = "Employee's primary skill", example = "Java", required = true)
+    @Schema(description = "Employee's primary skill", example = "Java", requiredMode = Schema.RequiredMode.REQUIRED)
     private String primarySkill;
 
     @Schema(description = "Employee's secondary skill", example = "Python")
