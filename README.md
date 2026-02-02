@@ -1,6 +1,6 @@
 # Employee Management System
 
-A RESTful microservice for managing employee records built with Spring Boot 4.0.2.
+A RESTful microservice for managing employee records built with Spring Boot 4.0.2 and H2 in-memory database.
 
 ## 🚀 Technologies Used
 
